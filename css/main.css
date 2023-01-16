@@ -4,9 +4,6 @@
     box-sizing: border-box;
 }
 
-body{
-    height: 100%;
-}
 
 /* Navbar */
 .navbar{ 
@@ -148,6 +145,7 @@ body{
 
 .versus{
     font-weight: 900;
+    padding: 10px 0px;
 }
 
 .event .event-right .event-timing{
@@ -343,10 +341,10 @@ body{
     font-size: 16px;
 }
 
-
 .detail .detail-down .detail-description .detail-homeTeam .goals{
     font-size: 20px;
 }
+
 .detail .detail-down .detail-description .detail-awayTeam{
     display: flex;
     justify-content: space-between;
@@ -357,7 +355,6 @@ body{
 .detail .detail-down .detail-description .detail-awayTeam .teamName{
     font-size: 16px;
 }
-
 
 .detail .detail-down .detail-description .detail-awayTeam .goals{
     font-size: 20px;
@@ -412,7 +409,6 @@ body{
     .event .event-right h3.event-title{
         font-size: 20px;
     }
-    
 
     .detail .detail-up .date, .year{    
         font-size: 22px;  
@@ -692,6 +688,10 @@ body{
         font-size: 14px;
     }
 
+    #details-container{
+        margin: 30px auto 100px;
+    }
+    
     .detail .detail-up .date, .year{
         font-size: 30px;
     }
@@ -725,5 +725,9 @@ body{
     
     .detail .detail-down .detail-cards{
         font-size: 20px;
+    }
+
+    .wrapper{
+        margin: 30px auto 185px;
     }
 }
