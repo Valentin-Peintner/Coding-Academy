@@ -46,7 +46,9 @@ http.onreadystatechange = function() {
                             <h3 class="event-title">${item.originCompetitionName}</h3>
                             
                             <div class="event-description">
-                            ${homeTeamName}<span class="versus"> vs. </span> ${item.awayTeam.officialName}  
+                                ${homeTeamName}
+                                <span class="versus"> vs. </span>
+                                ${item.awayTeam.officialName}
                             </div>
                                 
                             <div class="event-timing">

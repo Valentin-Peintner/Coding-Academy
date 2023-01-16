@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.navbar-container .navbar{ 
+.navbar{ 
     position: relative;
     display: flex;
     flex-direction: column;
@@ -126,21 +126,22 @@
 }
 
 .event .event-right h3.event-title{
-    font-size: 20px;
+    font-size: 18px;
     text-transform: uppercase;
     color: #990011FF;
     margin: 24px 0 20px 0;
 }
 
 .event .event-right .event-description{
-    font-size: 16px;
-    font-weight: 700;
-    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
 }
+
 
 .versus{
     font-weight: 900;
-    padding: 0 5px;
 }
 
 .event .event-right .event-timing{
@@ -281,7 +282,7 @@
 #details-container{
     font-family: 'Open Sans',sans-serif; 
     max-width: 800px;
-    margin: 60px auto;
+    margin: 30px auto 60px;
 }
 
 #details-container .detail{
@@ -306,7 +307,7 @@
 
 .detail .detail-up .date, .year{
     display: inline-block;
-    font-size: 22px;
+    font-size: 18px;
     padding: 2px;
 }
 
@@ -319,7 +320,7 @@
 }
 
 .detail .detail-down h3.detail-title{
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
     text-transform: uppercase;
     color: #990011FF;
@@ -327,24 +328,24 @@
 }
 
 .detail .detail-down .stage{
-    font-size: 16px;
+    font-size: 14px;
     text-align: center;
     text-transform: uppercase;
     color: #990011FF;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 .detail .detail-down .detail-description{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     font-weight: 700;
     text-transform: uppercase;
 }
 
 .detail .detail-down .detail-description .detail-homeTeam{
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 20px;
+
 }
 
 .detail .detail-down .detail-description .detail-homeTeam .teamName{
@@ -353,9 +354,14 @@
 
 
 .detail .detail-down .detail-description .detail-homeTeam .goals{
-    text-align: center;
-    font-size: 30px;
-    padding: 10px 0;
+    font-size: 20px;
+   
+}
+.detail .detail-down .detail-description .detail-awayTeam{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px;
 }
 
 .detail .detail-down .detail-description .detail-awayTeam .teamName{
@@ -364,9 +370,7 @@
 
 
 .detail .detail-down .detail-description .detail-awayTeam .goals{
-    text-align: center;
-    font-size: 30px;
-    padding: 10px 0;
+    font-size: 20px;
 }
 
 
@@ -375,7 +379,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 30px;
+    margin-top: 50px;
+    font-size: 14px;
+
+}
+
+.detail .detail-down .detail-cards div{
+    margin: 5px;
 }
 
 
@@ -388,6 +398,66 @@
 
     .wrapper{
         margin: 30px auto 75px;
+    }
+  
+    .event .event-right h3.event-title{
+        font-size: 20px;
+    }
+    
+
+    .event .event-right .event-description{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .versus{
+        padding: 0 15px;
+    }
+
+    .detail .detail-up .date, .year{    
+        font-size: 22px;  
+    }
+    
+ 
+    .detail .detail-down h3.detail-title{
+        font-size: 20px;
+    }
+
+    .detail .detail-down .stage{
+        font-size: 16px;
+    }
+    
+    
+    .detail .detail-down .detail-description .detail-homeTeam .teamName{
+        font-size: 18px;
+    }
+    
+    
+    .detail .detail-down .detail-description .detail-homeTeam .goals{
+        font-size: 22px;
+       
+    }
+ 
+    
+    .detail .detail-down .detail-description .detail-awayTeam .teamName{
+        font-size: 18px;
+    }
+    
+    
+    .detail .detail-down .detail-description .detail-awayTeam .goals{
+        font-size: 22px;
+    }
+    
+    
+    .detail .detail-down .detail-cards{
+        font-size: 16px;
+    }
+    
+    .detail .detail-down .detail-cards div{
+        margin: 5px;
     }
 
 }
@@ -421,6 +491,13 @@
     
     .event .event-right .event-description{
         font-size: 20px;
+        flex-direction: row;
+  
+        text-transform: uppercase;
+    }
+
+    .versus{
+        padding: 0 15px;
     }
     
     
@@ -462,6 +539,83 @@
         border-radius: 3px;
         padding: 8px 10px;
     }
+
+   
+    .detail .detail-up .date, .year{
+        font-size: 24px;
+    }
+    
+    
+    .detail .detail-down h3.detail-title{
+        font-size: 24px;
+    }
+    
+    .detail .detail-down .stage{
+        font-size: 18px;
+    }
+    
+    .detail .detail-down .detail-description{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 20px;
+    }
+    
+    .detail .detail-down .detail-description .detail-homeTeam{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px 20px;
+    
+    }
+    
+    .detail .detail-down .detail-description .detail-homeTeam .teamName{
+        font-size: 22px;
+    }
+    
+    
+    .detail .detail-down .detail-description .detail-homeTeam .goals{
+        font-size: 30px;
+        padding: 15px;
+       
+    }
+    .detail .detail-down .detail-description .detail-awayTeam{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px 20px;
+    }
+    
+    .detail .detail-down .detail-description .detail-awayTeam .teamName{
+        font-size: 22px;
+    }
+    
+    
+    .detail .detail-down .detail-description .detail-awayTeam .goals{
+        font-size: 30px;
+        padding: 15px;
+    }
+    
+    
+    .detail .detail-down .detail-cards{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        font-size: 18px;
+    
+    }
+    
+    .detail .detail-down .detail-cards div{
+        margin: 5px;
+    }
+
+
 }
 
 
@@ -470,7 +624,6 @@
     .navbar-container .navbar{ 
      flex-direction: row;
         /* warum geht das nicht? */
-     
 
     }
 
@@ -549,4 +702,48 @@
     .event .event-right .event-btn a{
         font-size: 14px;
     }
+
+    .detail .detail-up .date, .year{
+        font-size: 30px;
+    }
+    
+    
+    .detail .detail-down h3.detail-title{
+        font-size: 28px;
+    }
+    
+    .detail .detail-down .stage{
+        font-size: 20px;
+    }
+    
+    
+    .detail .detail-down .detail-description .detail-homeTeam .teamName{
+        font-size: 24px;
+    }
+    
+    
+    .detail .detail-down .detail-description .detail-homeTeam .goals{
+        font-size: 34px;
+        padding: 15px;
+       
+    }
+
+    .detail .detail-down .detail-description .detail-awayTeam .teamName{
+        font-size: 24px;
+    }
+    
+    
+    .detail .detail-down .detail-description .detail-awayTeam .goals{
+        font-size: 34px;
+        padding: 15px;
+    }
+    
+    
+    .detail .detail-down .detail-cards{
+   
+        font-size: 20px;
+    
+    }
+    
+  
 }
