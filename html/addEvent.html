@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="../css/style.css"> -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Lora&family=Montserrat+Alternates&family=Montserrat:wght@100;200;300;400;500;600;700&family=Open+Sans:wght@300&family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet"> 
+    <script src="../js/navigation.js" defer></script>
+    <script src="../js/addEvent.js" defer></script>
+    <title>Sportradar - Add Event</title>
+</head>
+<body>
+    <div class="navbar-container">
+        <nav class="navbar">
+            <div class="brand-title">
+                sp<span class="red">o</span>rt<span class="bold">radar</span>
+            </div>
+
+            <a href="#" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+
+            <div class="navbar-links">
+                <ul>
+                    <li>
+                        <a href="index.html">Overview</a>
+                    </li>
+                    <li>
+                        <a href="addEvent.html">Add Event</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <h1 class="header">Add an Event</h1>
+    
+    <div class="wrapper">
+        <div class="form">
+            <form action="#" method="post" id="formId">
+                <div class="input-field">
+                    <label for="competition">Competition</label>
+                    <input type="text" name="competition" id="comp">
+                </div>
+
+                <div class="input-field">
+                    <label for="homeTeam">Home Team</label>
+                    <input type="text" name="homeTeam" id="hTeam">
+                </div>
+
+                <div class="input-field">
+                    <label for="awayTeam">Away Team</label>
+                    <input type="text" name="awayTeam" id="aTeam">
+                </div>
+
+                <div class="dateTime-container">
+                    <div class="select">
+                        <label for="date">Date</label>
+                        <input type="date" name="match-day" id="match-date" >
+                    </div>
+
+                    <div class="select">
+                        <label for="time">Time</label>
+                        <input type="time" name="match-time" id="match-time" min="09:00" max="22:00">
+                    </div>
+                </div>
+
+                <div class="input-field">
+                    <input type="submit" name="submit" value="Submit" id="submitBtn" class="btn">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="event-container" class="display-none"></div>
+
+    <div class="footer">
+        <p>© Valentin Peintner</p>
+    </div>
+
+</body>
+</html>

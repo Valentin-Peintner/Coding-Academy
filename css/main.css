@@ -1,0 +1,552 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar-container .navbar{ 
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: 'Open Sans',sans-serif; 
+    background-color: #990011FF;
+}
+
+.navbar .brand-title{
+    font-size: 26px;
+    color: #fff;
+    margin: 10px;
+}
+
+.navbar .brand-title .bold{
+    font-weight: 900;
+}
+
+.navbar .navbar-links{
+    display: none;
+    width: 100%;
+}
+
+.navbar .navbar-links.active{   
+    display: flex;
+}
+
+.navbar .navbar-links ul{
+    width: 100%;
+    position: absolute;
+}
+
+.navbar .navbar-links ul li{
+    list-style: none;
+}
+
+.navbar .navbar-links ul li a{
+    display: block; 
+    padding: 10px 16px;
+    color: #fff;
+    background-color: #990011FF;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.navbar .navbar-links ul li a:hover{
+    background-color: #FCF6F5FF;
+    color: #990011FF;
+}
+
+.navbar .toggle-button{
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+}
+
+.navbar .toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.header{
+    color: #000;
+    font-family: 'Open Sans',sans-serif; 
+    font-size: 24px; 
+    font-weight: normal;  
+    text-transform: uppercase; 
+    margin: 30px 0;
+    text-align: center; 
+}
+
+#event-container{
+    font-family: 'Open Sans',sans-serif; 
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+#event-container .event{
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px -8px rgba(0,0,0,0.4);
+    margin: 32px 10px;
+}
+
+.event .event-left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    text-align: center;
+    background-color: #990011FF;
+    color: #eee;
+    padding: 8px 30px;
+    border-radius: 8px 8px 0 0;
+}
+
+.event .event-left .date, .year{
+    display: inline-block;
+    font-size: 22px;
+    padding: 2px;
+}
+
+
+.event .event-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 0 24px;
+}
+
+.event .event-right h3.event-title{
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #990011FF;
+    margin: 24px 0 20px 0;
+}
+
+.event .event-right .event-description{
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.versus{
+    font-weight: 900;
+    padding: 0 5px;
+}
+
+.event .event-right .event-timing{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    width: 120px;
+    border-radius: 16px;
+    background: #FCF6F5FF;
+    text-transform: uppercase;
+    padding: 8px;
+    margin: 24px 0;
+}
+
+.event .event-right .event-timing img{
+    height: 15px;
+    padding-right: 8px;
+}
+
+.event .event-right .event-btn {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 5px 0;
+}
+
+.event .event-right .event-btn a{
+    font-size: 12px;
+    color: #000;
+    background-color: #FCF6F5FF;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.footer{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    font-family: 'Open Sans',sans-serif; 
+    background-color: #990011FF;
+}
+
+.footer p{
+   margin-left: 5px;
+   color: #fff;
+}
+
+/* Add Event Page */
+.wrapper{
+    font-family: 'Open Sans',sans-serif; 
+    max-width: 500px;
+    width: 100%;
+    background-color: #990011FF;
+    margin: 30px auto 60px;
+    padding: 20px;
+}
+
+.wrapper .form{
+    width: 100%;
+}
+
+.wrapper .form .input-field{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.wrapper .form .input-field label{
+    font-size: 18px;
+    text-transform: uppercase;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.wrapper .form .input-field input{
+    width: 100%;
+    border: 1px solid #d5dbd9;
+    border-radius: 3px;
+    padding: 10px 5px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.dateTime-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
+    margin-bottom: 20px;
+}
+
+.wrapper .form .select label{
+    font-size: 18px;
+    text-transform: uppercase;
+    width: 100%;
+    color: #fff;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.wrapper .form .select input{
+    width: auto;
+    border: 1px solid #d5dbd9;
+    border-radius: 3px;
+    padding: 10px 5px;
+    transition: all 0.3s ease;
+}
+
+
+.wrapper .form .input-field .btn{
+    font-family: 'Open Sans',sans-serif; 
+    font-size: 16px;
+    text-transform: uppercase;
+    width: 100%;
+    cursor: pointer;
+    border: 0;
+    border-radius: 3px;
+    padding: 8px 10px; 
+}
+
+.wrapper .form .input-field:last-child{
+    margin-bottom: 0;
+}
+
+.display-none{
+    display: none;
+}
+
+/* detail Page */
+#details-container{
+    font-family: 'Open Sans',sans-serif; 
+    max-width: 800px;
+    margin: 60px auto;
+}
+
+#details-container .detail{
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px -8px rgba(0,0,0,0.4);
+    margin: 32px 10px;
+}
+
+.detail .detail-up{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    text-align: center;
+    background-color: #990011FF;
+    color: #eee;
+    padding: 8px 30px;
+    border-radius: 8px 8px 0 0;
+}
+
+.detail .detail-up .date, .year{
+    display: inline-block;
+    font-size: 22px;
+    padding: 2px;
+}
+
+.detail .detail-down{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 0 24px;
+}
+
+.detail .detail-down h3.detail-title{
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #990011FF;
+    margin: 24px 0 15px 0;
+}
+
+.detail .detail-down .stage{
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #990011FF;
+    margin-bottom: 20px;
+}
+
+.detail .detail-down .detail-description{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.detail .detail-down .detail-description .detail-homeTeam{
+    display: flex;
+    flex-direction: column;
+}
+
+.detail .detail-down .detail-description .detail-homeTeam .teamName{
+    font-size: 16px;
+}
+
+
+.detail .detail-down .detail-description .detail-homeTeam .goals{
+    text-align: center;
+    font-size: 30px;
+    padding: 10px 0;
+}
+
+.detail .detail-down .detail-description .detail-awayTeam .teamName{
+    font-size: 16px;
+}
+
+
+.detail .detail-down .detail-description .detail-awayTeam .goals{
+    text-align: center;
+    font-size: 30px;
+    padding: 10px 0;
+}
+
+
+.detail .detail-down .detail-cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+
+
+
+@media (min-width: 320px){
+
+    .header{
+        font-size: 28px; 
+    }
+
+    .wrapper{
+        margin: 30px auto 75px;
+    }
+
+}
+
+
+@media (min-width: 480px){
+    .navbar .brand-title{
+        font-size: 30px;
+    }
+
+    .header{
+        font-size: 32px; 
+    }
+
+    .navbar .toggle-button{
+        top: 20px;
+        right: 20px;
+        width: 30px;
+        height: 21px;
+    }
+
+    .event .event-left .date, .year{
+        font-size: 28px;
+        padding: 0;
+    }
+
+    
+    .event .event-right h3.event-title{
+        font-size: 26px;
+    }
+    
+    .event .event-right .event-description{
+        font-size: 20px;
+    }
+    
+    
+    .event .event-right .event-timing{
+        font-size: 14px;
+    }
+    
+    .event .event-right .event-timing img{
+        height: 20px;
+    }
+    
+    .event .event-right .event-btn a{
+        font-size: 14px;
+    }
+
+    .wrapper .form .input-field label{
+        font-size: 22px;
+    }
+    
+    .wrapper .form .input-field input{
+        padding: 15px 10px;
+    }
+     
+    .wrapper .form .select label{
+        font-size: 22px;
+        margin-right: 5px;  
+    }
+    
+    .wrapper .form .select input{
+        padding: 15px 10px;
+    }
+    
+    
+    .wrapper .form .input-field .btn{
+        font-size: 20px;
+        width: 100%;
+        cursor: pointer;
+        border: 0;
+        border-radius: 3px;
+        padding: 8px 10px;
+    }
+}
+
+
+@media (min-width: 600px){
+
+    .navbar-container .navbar{ 
+     flex-direction: row;
+        /* warum geht das nicht? */
+     
+
+    }
+
+    .navbar .brand-title{
+        font-size: 36px;
+    }
+
+    .navbar .navbar-links{
+        display: flex;
+      
+    }
+    
+    .navbar .navbar-links ul{   
+        position: relative;
+        display: flex;
+    }
+
+    .navbar .navbar-links ul li a{
+        padding: 30px 21px;
+
+    }
+
+    .navbar .toggle-button{
+        display: none;
+    }
+
+    .header{
+        font-size: 36px; 
+    }
+
+    #event-container .event{
+        display: flex;
+        flex-direction: row;
+        border-radius: 8px;
+        box-shadow: 0 4px 16px -8px rgba(0,0,0,0.4);
+        margin: 32px 10px;
+    }
+
+    .event .event-left{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        text-align: center;
+        background-color: #990011FF;
+        color: #eee;
+        padding: 8px 50px;
+        border-radius: 8px 0 0 8px;
+    }
+
+    .event .event-left .date{
+        font-size: 32px;
+    }
+
+    .event .event-left .year{
+        font-size: 32px;
+        font-weight: normal;
+    }
+
+    .event .event-right h3.event-title{
+        font-size: 28px;
+    }
+    
+    .event .event-right .event-description{
+        font-size: 20px;
+    }
+    
+    .event .event-right .event-timing{
+        font-size: 14px;
+    }
+    
+    .event .event-right .event-timing img{
+        height: 20px;
+    }
+    
+    .event .event-right .event-btn a{
+        font-size: 14px;
+    }
+}
