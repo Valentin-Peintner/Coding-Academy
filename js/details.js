@@ -67,46 +67,46 @@ http.onreadystatechange = function() {
         let homeTeamName = event.homeTeam ? event.homeTeam.name : 'Undetermined';
         
         
-        output += `
-                    <div class="detail">
-                        <div class="detail-up">
-                            <div class="detail-date">
-                                <div class="date">${day} ${month} </div>
-                                <div class="year">${year}</div>
+        output += 
+                `<div class="detail">
+                    <div class="detail-up">
+                        <div class="detail-date">
+                            <div class="date">${day} ${month} </div>
+                            <div class="year">${year}</div>
+                        </div>
+                    </div>
+
+                    <div class="detail-down">
+                        <h3 class="detail-title">${event.originCompetitionName}</h3>
+                        <p class="stage">${event.stage.name}</p>
+                    
+                        <div class="detail-description">
+                            <div class="detail-homeTeam">
+                                <h3 class="teamName">${homeTeamName}</h3>   
+                                    <p class="goals">${event.result.homeGoals}</p>
+                            </div> 
+
+                            <div class="detail-awayTeam">
+                                <h3 class="teamName">${event.awayTeam.name}</h3>                 
+                                <p class="goals">${event.result.awayGoals}</p>
                             </div>
                         </div>
-
-                        <div class="detail-down">
-                            <h3 class="detail-title">${event.originCompetitionName}</h3>
-                            <p class="stage">${event.stage.name}</p>
-                        
-                            <div class="detail-description">
-                                <div class="detail-homeTeam">
-                                    <h3 class="teamName">${homeTeamName}</h3>   
-                                       <p class="goals">${event.result.homeGoals}</p>
-                                </div> 
-
-                                <div class="detail-awayTeam">
-                                    <h3 class="teamName">${event.awayTeam.name}</h3>                 
-                                    <p class="goals">${event.result.awayGoals}</p>
-                                </div>
+                            
+                        <div class="detail-cards">
+                            <div class="yellow">
+                                Yellow Cards: ${yellowCard}
                             </div>
-                                
-                            <div class="detail-cards">
-                                <div class="yellow">
-                                    Yellow Cards: ${yellowCard}
-                                </div>
 
-                                <div class="yellow-s">
-                                    Second Yellow Cards: ${secondYellowCards} 
-                                </div>
-                
-                                <div class="red">
-                                    Red Cards: ${directRedCards} 
-                                </div> 
-                            </div>               
-                        </div>
-                    </div>`;
+                            <div class="yellow-s">
+                                Second Yellow Cards: ${secondYellowCards} 
+                            </div>
+            
+                            <div class="red">
+                                Red Cards: ${directRedCards} 
+                            </div> 
+                        </div>               
+                    </div>
+                </div>`;
 
         document.getElementById('details-container').innerHTML = output;
     }

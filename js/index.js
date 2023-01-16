@@ -30,11 +30,11 @@ http.onreadystatechange = function() {
                 item.timeVenueUTC = timeFourDigits;
             }
            
+                
+            const homeTeamName = item.homeTeam ? item.homeTeam.officialName : 'Undetermined';
 
-            let homeTeamName = item.homeTeam ? item.homeTeam.officialName : 'Undetermined';
-
-            output += `
-                    <div class="event">
+            output += 
+                    `<div class="event">
                         <div class="event-left">
                             <div class="event-date">
                                 <div class="date">${day} ${month} </div>
@@ -47,7 +47,7 @@ http.onreadystatechange = function() {
                             
                             <div class="event-description">
                                 ${homeTeamName}
-                                <span class="versus"> vs. </span>
+                                <span class="versus">vs.</span>
                                 ${item.awayTeam.officialName}
                             </div>
                                 

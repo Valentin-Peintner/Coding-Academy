@@ -27,34 +27,32 @@ function submitForm(e){
    const year = date.getFullYear();
 
 
-let output = '';
+   let output = '';
 
-output += `
-         <div class="event">
+   output += 
+            `<div class="event">
                <div class="event-left">
                   <div class="event-date">
-                  <div class="date">${day} ${month}  </div>
-                  <div class="year">${year}</div>
+                     <div class="date">${day} ${month}</div>
+                     <div class="year">${year}</div>
                   </div>
                </div>
 
                <div class="event-right">
                   <h3 class="event-title">${competition}</h3>
                   
-
                   <div class="event-description">
-                  ${homeTeam}<span class="versus"> vs. </span> ${awayTeam}  
+                  ${homeTeam}<span class="versus">vs.</span>${awayTeam}  
                   </div>
                      
                   <div class="event-timing">
                      <img src="../img/uhr.png" alt="time"> ${time}
                   </div>              
                </div>
-         </div>`;
+            </div>`;
          
-    
+            
    document.getElementById('event-container').innerHTML = output;
-
 }
 
 form.addEventListener('submit', submitForm);
