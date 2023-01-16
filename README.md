@@ -1,3 +1,5 @@
 # Coding-Academy
 
-Important to have a look with Go Live Funktion in Editor
+Please make sure that you open the index.html with Go Live function from the Editor.
+
+
