@@ -599,34 +599,48 @@ body{
 
 @media (min-width: 600px){
 
-    .navbar-container .navbar{ 
-     flex-direction: row;
-        /* warum geht das nicht? */
+    .navbar{ 
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
     }
-
+    
     .navbar .brand-title{
-        font-size: 36px;
+        font-size: 34px;
     }
 
     .navbar .navbar-links{
         display: flex;
+        justify-content: space-between;
+        width: auto;
     }
     
-    .navbar .navbar-links ul{   
+    .navbar .navbar-links.active{   
+        display: none;
+    }
+    
+    .navbar .navbar-links ul{
         position: relative;
         display: flex;
     }
-
+    
+    .navbar .navbar-links ul li{
+        list-style: none;
+    }
+    
     .navbar .navbar-links ul li a{
-        padding: 30px 21px;
+        padding: 23px 30px;
+        text-decoration: none;
+        text-transform: uppercase;
     }
 
     .navbar .toggle-button{
-        display: none;
+       display: none;
     }
-
+    
     .header{
-        font-size: 36px; 
+        font-size: 40px; 
     }
 
     #event-container .event{
