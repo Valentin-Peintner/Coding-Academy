@@ -56,7 +56,7 @@ http.onreadystatechange = function() {
                             </div>
 
                             <div class="event-btn">
-                                <a href="/html/detailsPage.html?event=${item.id}">details</a>        
+                                <a href="../html/detailsPage.html?event=${item.id}">details</a>        
                             </div>  
                         </div>
                     </div>`;
