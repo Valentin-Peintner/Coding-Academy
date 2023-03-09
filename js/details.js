@@ -36,33 +36,23 @@ http.onreadystatechange = function() {
         const month = new Intl.DateTimeFormat("en-US", options).format(date);
         const year = date.getFullYear();
 
-        // Function 
-        let yellowCard = event.result.yellowCards;
 
-            if (yellowCard.length === 0) {
+        function getCards(yellowCard,secondYellowCards,directRedCards){
+            let yellowCard = event.result.yellowCards;
+            let secondYellowCards = event.result.secondYellowCards;
+            let directRedCards = event.result.directRedCards;
+
+            if (yellowCard.length === 0 || secondYellowCards.length === 0 || directRedCards.length === 0) {
                 yellowCard = 0;
-            }
-            else{
-                yellowCard = yellowCard.length;
-            }
-
-        let secondYellowCards = event.result.secondYellowCards;
-
-            if (secondYellowCards.length == 0) {
                 secondYellowCards = 0;
-            }
-            else{
-                secondYellowCards = secondYellowCards.length;
-            }
-
-        let directRedCards = event.result.directRedCards;
-
-            if (directRedCards.length == 0) {
                 directRedCards = 0;
             }
             else{
+                yellowCard = yellowCard.length;
+                secondYellowCards = secondYellowCards.length;
                 directRedCards = directRedCards.length;
             }
+        }
         
         
         let homeTeamName = event.homeTeam ? event.homeTeam.name : 'Undetermined';
@@ -95,15 +85,15 @@ http.onreadystatechange = function() {
                             
                         <div class="detail-cards">
                             <div class="yellow">
-                                Yellow Cards: ${yellowCard}
+                                Yellow Cards: ${getCards(yellowCard)}
                             </div>
 
                             <div class="yellow-s">
-                                Second Yellow Cards: ${secondYellowCards} 
+                                Second Yellow Cards: ${getCards(secondYellowCards)} 
                             </div>
             
                             <div class="red">
-                                Red Cards: ${directRedCards} 
+                                Red Cards: ${getCards(directRedCards)} 
                             </div> 
                         </div>               
                     </div>
