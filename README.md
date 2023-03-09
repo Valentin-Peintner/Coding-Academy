@@ -1,4 +1,4 @@
-# Coding-Academy
+
 
 Please make sure that you open the index.html with Live Server Function from your Editor.
 
