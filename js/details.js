@@ -1,5 +1,6 @@
 "use strict";
 
+
 function extract(data,id){
  
     for(let item of data){
@@ -17,9 +18,9 @@ http.onreadystatechange = function() {
         let response = JSON.parse(http.responseText);
 
         let data = response.data;
-
         const id = new URLSearchParams(window.location.search).get('event') 
 
+   
         const event = extract(data,id);
         
         if(event == null){
@@ -35,10 +36,10 @@ http.onreadystatechange = function() {
         const month = new Intl.DateTimeFormat("en-US", options).format(date);
         const year = date.getFullYear();
 
-
+        // Function 
         let yellowCard = event.result.yellowCards;
 
-            if (yellowCard.length == 0) {
+            if (yellowCard.length === 0) {
                 yellowCard = 0;
             }
             else{

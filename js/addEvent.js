@@ -46,7 +46,7 @@ function submitForm(e){
                   </div>
                      
                   <div class="event-timing">
-                     <img src="../img/uhr.png" alt="time"> ${time}
+                     <img src="../img/clock.png" alt="time"> ${time}
                   </div>              
                </div>
             </div>`;

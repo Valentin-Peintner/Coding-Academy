@@ -4,6 +4,7 @@ let http = new XMLHttpRequest();
 
 http.onreadystatechange = function() {
     if(this.readyState == 4 && this.status == 200){
+
         let response = JSON.parse(http.responseText);
 
         let data = response.data;
@@ -30,7 +31,6 @@ http.onreadystatechange = function() {
                 item.timeVenueUTC = timeFourDigits;
             }
            
-                
             const homeTeamName = item.homeTeam ? item.homeTeam.officialName : 'Undetermined';
 
             output += 
@@ -52,7 +52,7 @@ http.onreadystatechange = function() {
                             </div>
                                 
                             <div class="event-timing">
-                                <img src="../img/uhr.png" alt="time"> ${item.timeVenueUTC}
+                                <img src="../img/clock.png" alt="time"> ${item.timeVenueUTC}
                             </div>
 
                             <div class="event-btn">
